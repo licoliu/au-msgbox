@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta name="fragment" content="!" />
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<title>au-msgbox test</title>
+<link rel="stylesheet" type="text/css" href="../css/default.css">
+<script src="../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="../src/atom/lico/msgbox/Msgbox.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.licoMsgbox({
+	      title: "测试",
+	      content: "您确定执行 XXX 操作吗？",
+	      OK: '确定',
+	      CANCEL: '取消',
+	      icon: 'default',
+	      buttons: [],
+	      handler: function(value, msgbox) {
+	        switch (value) {
+	          case "1":
+	            return false;
+	          case "0":
+	          default:
+	            console.log('取消');
+	            break;
+	        }
+	      }
+	    });
+	});
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>
