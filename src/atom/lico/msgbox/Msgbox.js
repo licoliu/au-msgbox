@@ -5,7 +5,7 @@
     var licoMsgbox = function() {
 
       return {
-        version: '0.1.2',
+        version: '0.1.3',
         defaults: {
           content: '',
           title: '提示',
